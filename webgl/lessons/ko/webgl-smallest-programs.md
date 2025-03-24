@@ -37,7 +37,7 @@ gl.clear(gl.COLOR_BUFFER_BIT);
 간단한 테스트로서 알려진 색상으로 텍스처를 지우는 셰이더로 텍스처에 렌더링하는 것을 멈춰봅시다.
 
 ```js
-gl.bindFramebuffer(gl.FRAMEBUFFER, framebufferWithTexture)
+gl.bindFramebuffer(gl.FRAMEBUFFER, framebufferWithTexture);
 gl.clearColor(1, 0, 1, 1);  // 자홍색
 gl.clear(gl.COLOR_BUFFER_BIT);
 ```
@@ -157,7 +157,7 @@ const [minSize, maxSize] = gl.getParameter(gl.ALIASED_POINT_SIZE_RANGE);
 ```
 
 WebGL 스펙은 오직 최대 크기 1.0을 필요로 합니다.
-다행히도 [모든 GPU와 드라이버는 아니지만 대부분이 더 큰 크기를 지원](https://webglstats.com/webgl/parameter/ALIASED_POINT_SIZE_RANGE)합니다.
+다행히도 [모든 GPU와 드라이버는 아니지만 대부분이 더 큰 크기를 지원](https://web3dsurvey.com/webgl/parameters/ALIASED_POINT_SIZE_RANGE)합니다.
 
 `gl_PointSize`를 설정한 다음 정점 셰이더가 종료될 때, `gl_Position`에 설정한 모든 값은 픽셀 단위의 화면/캔버스 공간으로 변환되며, 네 방향 모두에 +/- gl_PointSize / 2인 위치에 정사각형이 생성됩니다.
 
